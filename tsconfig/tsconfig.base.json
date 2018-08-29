@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "baseUrl": "../src",
+    "sourceRoot": "../src",
+    "paths": {
+      "rxjs": ["./"],
+      "rxjs/*": ["./*"]
+    }
+  },
+  "files": [
+    //elad entry-point
+    "../src/index.ts",
+    //cms entry-point
+    "../src/cms/index.ts",
+
+    // umd entry-point
+    "../src/umd.ts"
+  ]
+}
