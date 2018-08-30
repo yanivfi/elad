@@ -1,6 +1,6 @@
 {
   "name": "elad",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "starter for adding reusable components",
   "main": "index.js",
   "private": false,
@@ -43,7 +43,7 @@
     "generate_packages": "node .make-packages.js",
     "lint_src": "tslint -c tslint.json \"src/**/*.ts\"",
     "lint": "npm-run-all --parallel lint_*",
-    "publish1": "./publish.sh",
+    "publish_1": "publish.sh",
     "prepublish": "shx rm -rf ./typings && npm run build_all",
     "test": "mocha --require babel-register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"

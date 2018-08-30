@@ -38,12 +38,12 @@ select branch in "master" "stable"; do
 
     echo "Deleted tag because it's wrong, no worries, we'll tag again in a sec"
 
-    echo "Generating CHANGELOG.md"
-    npm run generate_changelog
+    #echo "Generating CHANGELOG.md"
+    #npm run generate_changelog
 
     # Quickly show changes to verify
-    git diff
-    read -p "Examine and correct CHANGELOG.md. [Enter] to continue"
+    #git diff
+    #read -p "Examine and correct CHANGELOG.md. [Enter] to continue"
 
     git tag $version
 
@@ -53,10 +53,7 @@ select branch in "master" "stable"; do
   done
 
 
-  read -p "Ready to publish @reactivex/rxjs@$version. [Enter] to continue"
-  npm publish
-
-  read -p "Ready to publish rxjs@$version. [Enter] to continue"
+  read -p "Ready to publish elad@$version. [Enter] to continue"
   cd dist/package/
   npm publish
   cd ../../
