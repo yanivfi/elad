@@ -5,6 +5,11 @@
   "main": "index.js",
   "private": false,
   "sideEffects": false,
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "lint-staged": {
     "*.@(js)": [
       "eslint --fix",
