@@ -19,4 +19,7 @@ export class Elad {
     set age(value: number) {
         this._age = value;
     }
+    toString() {
+        console.info(`name:${this.name}  age:${this.age}   version:${this.version}`);
+    }
 }
