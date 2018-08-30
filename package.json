@@ -28,6 +28,7 @@
     "clean_dist_esm2015": "shx rm -rf ./dist/esm2015",
     "clean_dist_global": "shx rm -rf ./dist/global",
     "clean_dist_types": "shx rm -rf ./dist/typings",
+    "commit": "git-cz",
     "compile_dist_cjs": "tsc -p ./tsconfig/tsconfig.cjs.json",
     "compile_dist_esm5": "tsc -p ./tsconfig/tsconfig.esm5.json",
     "compile_dist_esm5_for_rollup": "tsc -p ./tsconfig/tsconfig.esm5.rollup.json",
@@ -37,9 +38,14 @@
     "generate_packages": "node .make-packages.js",
     "lint_src": "tslint -c tslint.json \"src/**/*.ts\"",
     "lint": "npm-run-all --parallel lint_*",
+    "publish1": "./publish.sh",
     "prepublish": "shx rm -rf ./typings && npm run build_all",
     "test": "mocha --require babel-register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanivfi/elad.git"
   },
   "keywords": [
     "elad",
@@ -73,6 +79,7 @@
     "babel-preset-env": "^7.0.0-beta.3",
     "babel-register": "^7.0.0-beta.3",
     "chai": "^4.1.2",
+    "commitizen": "2.9.6",
     "fs-extra": "5.0.0",
     "google-closure-compiler-js": "20170218.0.0",
     "jsdom": "11.11.0",
