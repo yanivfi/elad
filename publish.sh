@@ -54,6 +54,7 @@ select branch in "master" "stable"; do
 
 
   read -p "Ready to publish elad@$version. [Enter] to continue"
+  npm run build_all
   cd dist/package/
   npm publish
   cd ../../
