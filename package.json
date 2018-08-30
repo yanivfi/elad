@@ -1,6 +1,6 @@
 {
   "name": "elad",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "starter for adding reusable components",
   "main": "index.js",
   "private": false,
